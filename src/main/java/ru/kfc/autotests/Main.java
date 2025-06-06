@@ -19,16 +19,13 @@ public class Main {
             item = (myArray[i]);
             System.out.println(item);
 
+            if (item > maxElement) {
+                maxElement = item;
+            }
 
-        if (item > maxElement) {
-            maxElement = item;
+            sumElement = sumElement + item;
 
-        }
-
-        sumElement = sumElement + item;
-
-
-        }
+            }
         System.out.println("2. максимальное число в массиве = " + item);
         System.out.println("3. Сумма всех элементов = " + sumElement);
     }
