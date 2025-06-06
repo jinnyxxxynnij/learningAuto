@@ -12,7 +12,7 @@ public class Main {
         }
         int maxElement = myArray[0];
         int sumElement = 0;
-        int item = 0;
+        int item;
 
         for (int i = 0; i < myArray.length; i++) {
             item = (myArray[i]);
