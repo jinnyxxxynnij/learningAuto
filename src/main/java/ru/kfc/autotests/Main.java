@@ -10,7 +10,7 @@ public class Main {
         for (int i = 0; i < myArray.length; i ++) {
             myArray[i] = new Random().nextInt(20);
         }
-        int maxElement = 0;
+        int maxElement = myArray[0];
         int sumElement = 0;
         int item = 0;
 
