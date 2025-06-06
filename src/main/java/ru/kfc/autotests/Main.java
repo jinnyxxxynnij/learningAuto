@@ -25,7 +25,7 @@ public class Main {
             sumElement = sumElement + item;
 
             }
-        System.out.println("2. максимальное число в массиве = " + item);
+        System.out.println("2. максимальное число в массиве = " + maxElement);
         System.out.println("3. Сумма всех элементов = " + sumElement);
     }
 }
