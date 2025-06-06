@@ -1,5 +1,4 @@
 package ru.kfc.autotests;
-
 import java.util.Random;
 
 public class Main {
@@ -29,6 +28,4 @@ public class Main {
         System.out.println("2. максимальное число в массиве = " + item);
         System.out.println("3. Сумма всех элементов = " + sumElement);
     }
-
-
 }
