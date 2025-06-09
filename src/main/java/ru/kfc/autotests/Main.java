@@ -3,29 +3,26 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        /*System.out.println("Hello ");
-        System.out.println("world!");*/
+        Person student1 = new Person();
 
-        int[] myArray = new int[20];
-        for (int i = 0; i < myArray.length; i ++) {
-            myArray[i] = new Random().nextInt(20);
-        }
-        int maxElement = myArray[0];
-        int sumElement = 0;
-        int item;
+        Person student2 = new Person();
+        student2.fullName = "Petrov";
+        student2.age = 20;
 
-        for (int i = 0; i < myArray.length; i++) {
-            item = (myArray[i]);
-            System.out.println(item);
+        Person student3 = new Person();
+        student3.fullName = "Sidorov";
+        student3.age = 23;
 
-            if (item > maxElement) {
-                maxElement = item;
-            }
+        Person student4 = new Person();
+        student4.fullName = "Ivanov";
+        student4.age = 36;
 
-            sumElement = sumElement + item;
+        student1.talk();
+        student2.talk();
+        student3.talk();
+        student4.talk();
 
-            }
-        System.out.println("2. максимальное число в массиве = " + maxElement);
-        System.out.println("3. Сумма всех элементов = " + sumElement);
+        student1.count();
+        //count();
     }
 }
