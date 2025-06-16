@@ -6,4 +6,14 @@ public class Kopilka extends Cards{
         super (cardNumber, cardOwnerName, cardExpMonth, cardEXpYear, balance);
         this.bonusNakoplenie = bonusNakoplenie;
     }
+    @Override
+    public void getCardBalance() {
+        System.out.println("Баланс клиента " + getCardOwnerName() + " составляет: " + getBalance() + ". Баланс накоплений: " + bonusNakoplenie);
+    }
+
+    @Override
+    public void getAllInfo() {
+        System.out.println(getCardNumber() + " " + getCardOwnerName() + " " + getCardExpMonth() + "/" + getCardEXpYear() + " " + getBalance() + " " + bonusNakoplenie);
+    }
+
 }

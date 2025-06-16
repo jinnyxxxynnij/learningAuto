@@ -60,5 +60,19 @@ public class Cards {
     }
 
     //метод получения баланса
+    public void getCardBalance() {
+        System.out.println("Баланс клиента " + cardOwnerName + " составляет: " + balance);
+    }
+
+    //пополнение баланса
+
+
+    //совершение покупки
+
+
+    //получить инфу о карте
+    public void getAllInfo() {
+        System.out.println(cardNumber + " " + cardOwnerName + " " + cardExpMonth + "/" + cardEXpYear + " " + balance);
+    }
 
 }
