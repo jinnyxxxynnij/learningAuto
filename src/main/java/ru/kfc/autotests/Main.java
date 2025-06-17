@@ -16,5 +16,7 @@ public class Main {
         System.out.println("------------------------------------------");
         card1.setBalance(101.0);
         card1.getCardBalance();
+        System.out.println("------------------------------------------");
+        card2.setBalance();
     }
 }
