@@ -65,10 +65,16 @@ public class Cards {
     }
 
     //пополнение баланса
-
+    public void popolnenie(Double plusBalance) {
+        balance = balance + plusBalance;
+        System.out.println("Вы пополнилил баланс на " + plusBalance + ". Ваш новый баланс: " + balance);
+    }
 
     //совершение покупки
-
+    public void trata(Double minusBalance) {
+        balance = balance - minusBalance;
+        System.out.println("Вы потратили " + minusBalance + ". Ваш новый баланс: " + balance);
+    }
 
     //получить инфу о карте
     public void getAllInfo() {
