@@ -14,6 +14,7 @@ public class Main {
         card1.getAllInfo();
         card2.getAllInfo();
         card3.getAllInfo();
+        card4.getAllInfo();
         System.out.println("------------------------------------------");
         card1.setBalance(0.0);
         card1.showBalanceInfo();

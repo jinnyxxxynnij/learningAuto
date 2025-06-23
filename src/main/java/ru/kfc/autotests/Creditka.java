@@ -39,7 +39,7 @@ public class Creditka extends Card {
         } else {
             setBalance(getBalance() + plusBalance);
         }
-        System.out.println("Пополнение на сумму: " + plusBalance + ". Ваш баланс: " + getBalance() + "Баланс кредитных средств:  " + creditBalance);
+        System.out.println("Пополнение на сумму: " + plusBalance + ". Ваш баланс: " + getBalance() + ". Баланс кредитных средств:  " + creditBalance);
     }
 
     //трата с кредитки
