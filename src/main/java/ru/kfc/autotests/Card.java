@@ -1,6 +1,6 @@
 package ru.kfc.autotests;
 
-public class Cards {
+public class Card {
 
     private Integer cardNumber;
     private String cardOwnerName;
@@ -31,7 +31,7 @@ public class Cards {
 
     //setters
     public void setCardExpMonth(Integer cardExpMonth) {
-        if (cardExpMonth < 0 & cardExpMonth > 12) {
+        if (cardExpMonth < 0 || cardExpMonth > 12) {
             System.out.println("Указывая месяц, ведите число от 1 до 12");
             return;
         }
@@ -39,7 +39,7 @@ public class Cards {
     }
 
     public void setCardEXpYear(Integer cardEXpYear) {
-        if (cardEXpYear < 2024 & cardEXpYear > 2050) {
+        if (cardEXpYear < 2024 || cardEXpYear > 2050) {
             System.out.println("Указывая год, ведите число от 2025 до 2050");
             return;
         }
@@ -51,7 +51,7 @@ public class Cards {
     }
 
     //конструктор карт
-    public Cards (Integer cardNumber, String cardOwnerName, Integer cardExpMonth, Integer cardEXpYear, Double balance) {
+    public Card(Integer cardNumber, String cardOwnerName, Integer cardExpMonth, Integer cardEXpYear, Double balance) {
         this.cardNumber = cardNumber;
         this.cardOwnerName = cardOwnerName;
         this.cardExpMonth = cardExpMonth;
@@ -60,7 +60,7 @@ public class Cards {
     }
 
     //метод получения баланса
-    public void getCardBalance() {
+    public void showBalanceInfo() {
         System.out.println("Баланс клиента " + cardOwnerName + " составляет: " + balance);
     }
 
@@ -72,11 +72,13 @@ public class Cards {
 
     //совершение покупки
     public void trata(Double minusBalance) {
-        balance = balance - minusBalance;
-        System.out.println("Вы потратили " + minusBalance + ". Ваш новый баланс: " + balance);
+        if (balance >= minusBalance) {
+            balance = balance - minusBalance;
+            System.out.println("Вы потратили " + minusBalance + ". Ваш новый баланс: " + balance);
+        }
     }
 
-    //получить инфу о карте
+    //получить всю инфу о карте
     public void getAllInfo() {
         System.out.println(cardNumber + " " + cardOwnerName + " " + cardExpMonth + "/" + cardEXpYear + " " + balance);
     }

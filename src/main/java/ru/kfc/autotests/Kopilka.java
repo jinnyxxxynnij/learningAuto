@@ -1,6 +1,6 @@
 package ru.kfc.autotests;
 
-public class Kopilka extends Cards{
+public class Kopilka extends Card {
     private Double bonusNakoplenie;
     public Kopilka (Integer cardNumber, String cardOwnerName, Integer cardExpMonth, Integer cardEXpYear, Double balance, Double bonusNakoplenie) {
         super (cardNumber, cardOwnerName, cardExpMonth, cardEXpYear, balance);
@@ -8,15 +8,23 @@ public class Kopilka extends Cards{
     }
 
     @Override
-    public void getCardBalance() {
-        System.out.println("Баланс клиента " + getCardOwnerName() + " составляет: " + getBalance() + ". Баланс накоплений: " + bonusNakoplenie);
+    public void showBalanceInfo() {
+        System.out.println("Баланс клиента " + getCardOwnerName() + " составляет: " + getBalance() + ". Включая накопления: " + bonusNakoplenie);
     }
 
     @Override
     public void getAllInfo() {
-        System.out.println(getCardNumber() + " " + getCardOwnerName() + " " + getCardExpMonth() + "/" + getCardEXpYear() + " " + getBalance() + " " + bonusNakoplenie);
+        super.getAllInfo();
+        System.out.println("Баланс накоплений: " + bonusNakoplenie);
     }
 
+    @Override
+    public void popolnenie(Double plusBalance) {
+        bonusNakoplenie = bonusNakoplenie + plusBalance * 0.0005;
+        super.setBalance(getBalance() + bonusNakoplenie);
+        super.popolnenie(plusBalance);
+        System.out.println("У вас накоплено " + bonusNakoplenie + " рублей.");
+    }
 
 
 }
