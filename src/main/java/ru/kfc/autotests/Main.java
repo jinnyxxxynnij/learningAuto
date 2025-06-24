@@ -2,7 +2,7 @@ package ru.kfc.autotests;
 
 public class Main {
     public static void main(String[] args) {
-        Card card1 = new Card(2201, "Петров", 1, 2026, 0.0);
+        Debet card1 = new Debet(2201, "Петров", 1, 2026, 0.0);
         Bonus card2 = new Bonus(2202, "Сидоров", 3, 2027, 10.0, 5.0);
         Kopilka card3 = new Kopilka(2203, "Иванов", 12, 2030, 100.0, 15.0);
         Creditka card4 = new Creditka(2204, "Абрамова", 9, 2036, 2000.0, 1000.0);

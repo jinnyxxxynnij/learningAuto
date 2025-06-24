@@ -1,6 +1,6 @@
 package ru.kfc.autotests;
 
-public class Card {
+public abstract class Card {
 
     private Integer cardNumber;
     private String cardOwnerName;

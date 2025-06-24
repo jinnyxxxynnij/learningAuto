@@ -45,7 +45,7 @@ public class Creditka extends Card {
     //трата с кредитки
     @Override
     public void trata (Double minusBalance) {
-        if (getBalance() + creditBalance > minusBalance) {
+        if (getBalance() + creditBalance >= minusBalance) {
             if (getBalance() < minusBalance) {
                 creditBalance = creditBalance - (minusBalance - getBalance());
                 setBalance(0.0);
